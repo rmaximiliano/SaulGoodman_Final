@@ -1,0 +1,47 @@
+
+@import 'footer';
+$padding: 250px;
+$margin: 5px;
+
+@mixin Caja1 ($margen,){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: $margen; 
+}
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    article{
+        background-color: #f0ead2;
+        padding: $padding/10;
+        margin: $margin*4;
+    }
+    
+    img{
+        max-width: 700px;
+    }
+}
+
+
+footer{
+    grid-area: footer;
+    @include caja1 (20px);
+
+    a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+    }
+}
+
+section{
+    @include caja1 (10px);
+}

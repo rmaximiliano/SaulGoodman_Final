@@ -1,0 +1,339 @@
+/*Iniciar siempre con el reset del explorador*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  word-wrap: break-word;
+}
+  
+/*Grid index*/
+.gridContainer{
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "main main"
+  "article section"
+  "footer footer";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto;
+  background-color: #f0ead2;
+}
+/*Grid abogados*/
+.gridContainerAbogados{
+display: grid;
+  grid-template-areas: 
+  "header header"
+  "divAbogArea divAbogArea"
+  "section ."
+  "footer footer";
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto auto auto auto;
+  background-color: #f0ead2;
+}
+/*Div con titulo abogados*/
+.divAbogArea{
+  grid-area: divAbogArea;
+  padding: 1rem;
+}
+  
+.colorDeFondo{
+  background-color: #f0ead2;
+}
+  
+  
+/*Letras Titulos*/
+h1 a, h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  text-align: center;
+}
+  
+/*Desplegar Barra*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+  
+/*Fondo del Menu desplegado*/
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+  
+/*Contenido del menu*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  
+/*Contenido del menu*/
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  
+/*Sombra deL Menu*/
+.dropdown-content a:hover {background-color: #f1f1f1;}
+  
+/*Block momento hover*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+  
+/*Lista desordenada sin punto*/
+ul {
+  list-style-type: none;
+}
+  
+/*fondo con color gradiente*/
+.grad{
+  background: linear-gradient(#f9dcc4, #fec89a);
+}
+  
+header {
+  padding: 40px;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box; 
+}
+  
+/*Titulos con links siempre en negro*/
+h1 a:link, h1 a:visited {
+  text-decoration: none;
+  color: black;
+}
+  
+section{
+  grid-area: section;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: stretch; 
+  padding: 10px;
+}
+  
+/*animacion de texto*/
+.textanimatio1{
+  animation-duration: 4s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
+}
+  
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+  
+  
+  
+/*estilo imagen principal*/
+.imgprincipal:hover{
+  border-radius: 40%;
+  transition: all 3s ease;
+}
+    
+/*estilo para la lista-abogados*/
+table, th, td{
+  border: double 4px rgb(183, 185, 173);
+  margin: 5px;
+  border-radius: .4%;
+  padding: 2px;
+  text-align: center;
+}
+  
+/*aumenta el tamaño de la imagen en momento hover*/
+.imgLista:hover{
+  transform: scale(1.2, 1.2);
+  transition: all 2s ease;
+}
+  
+/*Imagen de lista-abogados*/
+.imgLista{
+  width: 100%;
+  max-width: 450px;
+  min-width: 250px;
+  border: 2px double #686060;
+  background-color: #000000;
+}
+
+/*tamaño img main, cambian en el media*/
+main img{
+  max-width: 700px;
+}
+/*tamaño al video de youtube*/
+iframe{
+  width: 80%;
+  padding: 10px;
+}
+/*tamaño img footer*/
+.imgFooter{
+  width: 100%;
+  padding: 7%;
+}
+
+.padbox{
+  padding: 3%;
+}
+
+.mrbox{
+  margin: 2%;
+}
+
+footer{
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+}
+
+main{
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  
+main,article {
+  background-color: #f0ead2;
+  padding: 25px;
+  margin: 20px;
+}
+
+
+
+@media only screen and (min-width:0px) and (max-width:767px){
+  .colorMedia{
+      background-color: #efefef;
+  }   
+}
+
+
+/* vista mobile */
+@media only screen and (min-width:0px) and (max-width:767px){
+  .gridContainer{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "article article"
+    "section section"
+    "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: #efefef;
+  }
+  
+  main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  article{
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  footer{
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  iframe{
+    width: 100%;
+    padding: 10px;
+  }
+  
+}
+  
+  
+/* vista mobile abogados*/
+@media only screen and (min-width:0px) and (max-width:767px){
+  .gridContainerAbogados{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "divAbogArea divAbogArea"
+    "section section"
+    "footer footer";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    background-color: #efefef;
+  }
+  
+  header{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  section{
+    grid-area: section;
+    box-sizing: border-box;
+    font-size: small;
+  }
+  
+  footer{
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .divAbogArea{
+    grid-area: divAbogArea;
+    padding: 1rem;
+  }
+  
+  .imgLista{
+    border: 2px double #686060;
+    background-color: #000000;
+    min-width: 50px;
+  }
+}
